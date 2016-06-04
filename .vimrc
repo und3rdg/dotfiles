@@ -1,3 +1,5 @@
+" => vim-plug plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "call plug#begin()
 call plug#begin('~/.vim/plugged')
 
@@ -11,31 +13,25 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'tpope/vim-fugitive'
+Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
-set encoding=utf-8
 set history=500
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-
-" Areas of the screen where the splits should occur
-set splitbelow
-set splitright
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Set 7 lines to the cursor - when moving vertically using j/k
+" Set 7 lines to the cursor and relative numbers - when moving vertically using j/k
 set so=7
-
 set relativenumber
+
+" Areas of the screen where the splits should occur
+set splitbelow
+set splitright
 
 " Ignore case when searching
 set ignorecase
@@ -66,7 +62,7 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
@@ -95,7 +91,6 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
@@ -103,8 +98,10 @@ set nobackup
 set nowb
 set noswapfile
 
+" Set to auto read when a file is changed from the outside
+set autoread
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
@@ -126,16 +123,6 @@ set si "Smart indent
 set wrap "Wrap lines
 
 
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f', '')<CR>
-vnoremap <silent> # :call VisualSelection('b', '')<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
@@ -154,9 +141,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" => Folding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable folding
+set foldmethod=manual
+set foldlevel=99
+
 " Enable folding with the spacebar
 nnoremap <space> za
-
 
 " Want to see the docstrings for folded code?
 let g:SimpylFold_docstring_preview=1
@@ -164,3 +157,33 @@ let g:SimpylFold_docstring_preview=1
 " The former line ensures that the autocomplete window goes away when you’re done with it, and the latter defines a shortcut for goto definition.
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" => Highlight all instances of word under cursor, when idle.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Useful when studying strange source code.
+" Type z/ to toggle highlighting on/off.
+nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+function! AutoHighlightToggle()
+  let @/ = ''
+  if exists('#auto_highlight')
+    au! auto_highlight
+    augroup! auto_highlight
+    setl updatetime=4000
+    echo 'Highlight current word: off'
+    return 0
+  else
+    augroup auto_highlight
+      au!
+      au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
+    augroup end
+    setl updatetime=500
+    echo 'Highlight current word: ON'
+    return 1
+  endif
+endfunction
+
+
+" => save and run current file
+noremap <f9> :w\|!./%<CR>
+noremap <f10> :w\|!python3 -i %<CR>
+
