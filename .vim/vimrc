@@ -12,11 +12,12 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tmhedberg/SimpylFold'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-commentary'
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
+Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
@@ -214,4 +215,3 @@ noremap <f9> :call VimuxRunCommand("clear; ./" . bufname("%"))<CR>
 " map <Leader>vz :call VimuxZoomRunner()<CR>
 
 " nnoremap <f8> :call w|source ~/.vim/vimrc
-
