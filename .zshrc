@@ -137,3 +137,4 @@ unset GREP_OPTIONS
 # Aliases
 alias la="ls -a"
 alias ll-"ls -l"
+alias tmux="tmux -2"
