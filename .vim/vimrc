@@ -72,7 +72,8 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme crystallite
+    " colorscheme crystallite
+    colorscheme vividchalk
 catch
 endtry
 
