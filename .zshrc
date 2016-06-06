@@ -2,6 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 source ".vim/plugged/gruvbox/gruvbox_256palette.sh"
+export TERM=xterm-256color
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -139,3 +140,4 @@ unset GREP_OPTIONS
 alias la="ls -a"
 alias ll-"ls -l"
 alias tmux="tmux -2"
+
