@@ -19,6 +19,8 @@ Plug 'tpope/vim-commentary'
 Plug 'benmills/vimux'
 Plug 'chrisbra/Colorizer'
 
+" new theme
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 set history=500
@@ -73,7 +75,7 @@ syntax enable
 
 try
     " colorscheme crystallite
-    colorscheme vividchalk
+    colorscheme gruvbox
 catch
 endtry
 
