@@ -1,8 +1,16 @@
 #!/bin/sh
 
-ln -s .bashrc ~/
-ln -s .myconf/ ~/
-ln -s .tmux.conf ~/
-ln -s .vim/ ~/
-ln -s .xinitrc ~/
-ln -s .zshrc ~/
+fileList=(".bashrc" ".myconf/" ".tmux.conf" ".vim/" ".xinitrc" ".zshrc")
+trash="tmp/dotfilesOld"
+
+if [ ! -f "$trash" ]
+   mkdir -p "$trash"
+fi
+
+for file in "${fileList[@]}
+do
+    if [ -f "~/$file" ]
+        mv "~/$file ~/$trash/$file"
+    fi
+    ln -s "~/dotfiles/$file ~/$file"
+done
