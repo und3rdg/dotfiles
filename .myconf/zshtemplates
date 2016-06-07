@@ -1,0 +1,19 @@
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+export ZSH_THEME="powerline"
+
+
+# "afowler" "alanpeabody" "arrow" "aussiegeek" "awesomepanda" "bira" "blinks" "candy" "clean" "cloud" "cypher" "dallas" "darkblood" "daveverwer" "dieter" ="dogenpunk" "dpoggi" "dstufft" "dst" ="duellj" "eastwood" "edvardm" "evan" "example" "fishy" "flazz" "fletcherm" "frisk" "funky" "fwalch" "gallifrey" "gallois" "garyblessington" "gentoo" "geoffgarside" "gozilla" "humza" "imajes" "jbergantine" "jispwoso" "jnrowe" "jonathan" "josh" "jreese" "jtriley" ="juanghurtado" "kardan" "kennethreitz" "kolo" "kphoen" "lambda" "linuxonly" "lukerandall" "macovsky-ruby" "macovsky" "maran" "mattcable" "mgutz" "mikeh" "miloshadzic" "minimal" "mrtazz" "murilasso" "muse" "nanotech" "nebirhos" "nicoulaj" "obraun" "philips" "pmcgee" "prose" ="re5et" "rgm" "risto" ="rixius" "robbyrussell" "simple" "skaro" "smt" ="Soliah" "sorin" "sporty_256" ="steeef" "sunaku" "sunrise" "superjarin" "takashiyoshida" "terminalparty" "theunraveler" "tjkirch" "tonotdo" "trapd00r" "wedisagree" "wezm" "wezm+" "xiong-chiamiov-plus" "xiong-chiamiov"
+
+
+# POWERLINE
+# function _update_ps1()
+# {
+#     export PROMPT="$(~/.myconf/powerline-zsh/powerline-zsh.py $?)"
+# }
+# precmd()
+# {
+#     _update_ps1
+# }
