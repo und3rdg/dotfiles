@@ -103,6 +103,8 @@ call plug#end()
         endif
     " Fix no background in tmux
         set t_ut=
+
+        set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<",space:␣
 " }
 
 
