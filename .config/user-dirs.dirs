@@ -1,0 +1,5 @@
+XDG_VIDEOS_DIR="/home/undg/Video"
+XDG_PICTURES_DIR="/home/undg/Images"
+XDG_MUSIC_DIR="/home/undg/Music"
+XDG_DOCUMENTS_DIR="/home/undg/Documents"
+XDG_DOWNLOAD_DIR="/home/undg/Downloads"

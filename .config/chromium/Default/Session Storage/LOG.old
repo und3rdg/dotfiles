@@ -1,0 +1,14 @@
+2016/05/22-20:47:22.303 980 Reusing MANIFEST /home/undg/.config/chromium/Default/Session Storage/MANIFEST-000001
+2016/05/22-20:47:22.303 980 Recovering log #16
+2016/05/22-20:47:22.303 980 Level-0 table #19: started
+2016/05/22-20:47:22.350 980 Level-0 table #19: 26807 bytes OK
+2016/05/22-20:47:22.384 980 Delete type=0 #16
+2016/05/22-20:47:22.384 1336 Compacting 4@0 + 1@1 files
+2016/05/22-20:47:22.484 1336 Generated table #21: 335 keys, 306986 bytes
+2016/05/22-20:47:22.484 1336 Compacted 4@0 + 1@1 files => 306986 bytes
+2016/05/22-20:47:22.517 1336 compacted to: files[ 0 1 1 0 0 0 0 ]
+2016/05/22-20:47:22.517 1336 Delete type=2 #11
+2016/05/22-20:47:22.517 1336 Delete type=2 #17
+2016/05/22-20:47:22.517 1336 Delete type=2 #14
+2016/05/22-20:47:22.517 1336 Delete type=2 #8
+2016/05/22-20:47:22.517 1336 Delete type=2 #19
