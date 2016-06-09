@@ -3,8 +3,8 @@
 file_list=( ".config/" ".myconf/" ".vim/" ".bashrc" ".bash_profile" ".gitconfig" ".tmux.conf" ".xbindkeysr" ".xinitrc" ".zprofile" ".zshrc" )
 
 trash="~/tmp/dotfilesOld/"
-home_dir="~/"
-dot_dir="~/.dotfiles/"
+home_dir="$HOME/"
+dot_dir="$HOME/.dotfiles/"
 
 if [ ! -f $trash ]
 then
