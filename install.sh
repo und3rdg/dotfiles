@@ -1,6 +1,7 @@
 #!/bin/sh
 
-file_list=('.bashrc' '.myconf/' '.tmux.conf' '.vim/' '.xinitrc' '.zshrc')
+# file_list=( '.config/' '.myconf/' '.vim/' '.bashrc' '.bash_profile' '.gitconfig' '.tmux.conf' '.xbindkeysr' '.xinitrc' '.zprofile' '.zshrc' )
+
 trash='~/tmp/dotfilesOld/'
 home_dir='~/'
 dot_dir='~/.dotfiles/'
