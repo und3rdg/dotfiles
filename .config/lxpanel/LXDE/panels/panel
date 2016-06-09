@@ -147,13 +147,22 @@ Plugin {
   }
 }
 Plugin {
+  type=netstat
+  Config {
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=2
+  }
+  expand=0
+}
+Plugin {
   type=launchbar
   Config {
     Button {
       id=lxde-screenlock.desktop
-    }
-    Button {
-      id=lxde-logout.desktop
     }
     Button {
       id=menu://applications/System/lxqt-logout.desktop
