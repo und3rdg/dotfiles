@@ -2,7 +2,7 @@
 @pcmanfm --desktop --profile LXDE
 #@xscreensaver -no-splash
 #@yakuake
-@xcompmgr
+#@xcompmgr
 #@guake
 @xbindkeys
 @mpd

@@ -1,2 +1,6 @@
 #*/plugged/*
 .gitignore
+.config/pavucontrol.ini
+.config/ranger/history
+.config/pulse
+
