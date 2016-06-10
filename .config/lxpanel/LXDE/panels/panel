@@ -97,12 +97,14 @@ Plugin {
     AcceptSkipPager=1
     ShowIconified=1
     ShowMapped=1
-    ShowAllDesks=0
+    ShowAllDesks=1
     UseMouseWheel=1
     UseUrgencyHint=1
     FlatButton=0
     MaxTaskWidth=150
     spacing=1
+    SameMonitorOnly=1
+    DisableUpscale=0
   }
 }
 Plugin {
@@ -167,5 +169,16 @@ Plugin {
     Button {
       id=menu://applications/System/lxqt-logout.desktop
     }
+  }
+}
+Plugin {
+  type=xkb
+  Config {
+    Model=pc105
+    LayoutsList=us
+    VariantsList=,
+    ToggleOpt=grp:shift_caps_toggle
+    DisplayType=0
+    FlagSize=1
   }
 }
