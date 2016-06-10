@@ -213,10 +213,10 @@ call plug#end()
     " <plVIMUX RUN COMMAND IN TMUX PANE>
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
     " map <f8> :call VimuxRunCommand("clear; python3 -i " . bufname("%"))<CR>
-        map <f9> :call VimuxRunCommand("clear; ./" . bufname("%"))<CR>
+        map <f9> :call VimuxRunCommand("./" . bufname("%"))<CR>
 
         " Run the current file with rspec
-        map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+        map <Leader>rb :call VimuxRunCommand("rspec " . bufname("%"))<CR>
 
         " Prompt for a command to run
         map <Leader>vp :VimuxPromptCommand<CR>
