@@ -2,6 +2,6 @@
 *cache*
 .config/pavucontrol.ini
 .config/ranger/history
-.config/pulse
+.config/pulse/*
 .config/mps-youtube/input_history
 
