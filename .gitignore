@@ -1,5 +1,6 @@
 #*/plugged/*
 *cache*
+*/tmp*
 .config/pavucontrol.ini
 .config/ranger/history
 .config/pulse/*
