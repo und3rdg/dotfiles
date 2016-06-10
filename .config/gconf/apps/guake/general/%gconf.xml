@@ -9,7 +9,7 @@
 	<entry name="use_audible_bell" mtime="1465469462" type="bool" value="true"/>
 	<entry name="window_valignment" mtime="1465252548" type="int" value="0"/>
 	<entry name="window_height_f" mtime="1465469432" type="float" value="33.723999999999997"/>
-	<entry name="window_height" mtime="1465470002" type="int" value="35"/>
+	<entry name="window_height" mtime="1465523086" type="int" value="41"/>
 	<entry name="default_shell" mtime="1465469432" type="string">
 		<stringvalue>/bin/zsh</stringvalue>
 	</entry>

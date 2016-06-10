@@ -1,6 +1,7 @@
 #*/plugged/*
-.gitignore
+*cache*
 .config/pavucontrol.ini
 .config/ranger/history
 .config/pulse
+.config/mps-youtube/input_history
 
