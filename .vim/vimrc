@@ -19,8 +19,9 @@
     Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
     Plug 'tmhedberg/SimpylFold' " <plSIMPLYFOLD>
 
-    " Plug 'christoomey/vim-tmux-navigator'
+    Plug 'christoomey/vim-tmux-navigator' " <plTMUXNAVIGATOR>
     Plug 'benmills/vimux' " <plVIMUX>
+    Plug 'blueyed/vim-diminactive'
 
     Plug 'terryma/vim-expand-region' " <plEXPANDREGION>
 
@@ -368,6 +369,11 @@ call plug#end()
         vmap v <Plug>(expand_region_expand)
         vmap <C-v> <Plug>(expand_region_shrink)
     " }}}
+    
+    " <plTMUXNAVIGATOR> {{{
 
+    " This will execute the update command on leaving vim to a tmux pane. Default is Zero
+        let g:tmux_navigator_save_on_switch = 1
+    " }}}
 " }}}
 
