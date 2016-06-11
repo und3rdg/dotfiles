@@ -1,18 +1,18 @@
-" <VIM-PLUG PLUGINS>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
-call plug#begin('~/.vim/plugged')
+" <VIM-PLUG PLUGINS> {{{
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-sensible' " vim-plug plugin manager
 
     " GIT PLUGINS
     Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter' " git dif in gutter(column line number)
+    Plug 'airblade/vim-gitgutter' " <plGITGUTTER> git dif in gutter(column line number)
 
-    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " <plNERDTREE>
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' } " <plNERDTREE>
     Plug 'jistr/vim-nerdtree-tabs'
 
     " Plug 'Valloric/YouCompleteMe' " <plYOUCOMPLETEME>
-    Plug 'chrisbra/Colorizer'
+    Plug 'chrisbra/Colorizer', { 'on': 'ColorToogle' }
     " Plug 'davidhalter/jedi-vim' " python
 
     Plug 'tpope/vim-commentary'
@@ -22,19 +22,23 @@ call plug#begin('~/.vim/plugged')
     " Plug 'christoomey/vim-tmux-navigator'
     Plug 'benmills/vimux' " <plVIMUX>
 
+    Plug 'terryma/vim-expand-region' " <plEXPANDREGION>
+
     " Theme
     Plug 'morhetz/gruvbox'
-    Plug 'altercation/vim-colors-solarized'
+    " Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
-" }
+" }}}
 
-
-" <SETTINGS>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" <SETTINGS> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Enable filetype plugins
         filetype plugin on
         filetype indent on
+
+    " Stop that stupid window from popping up:
+        map q: :q
 
     " Set history
         set history=500
@@ -47,25 +51,11 @@ call plug#end()
         set splitbelow
         set splitright
 
-    " Ignore case when searching
-    " When searching try to be smart about cases 
-    " Highlight search results
-    " Makes search act like search in modern browsers
-        set ignorecase
-        set smartcase
-        set hlsearch
-        set incsearch 
-
     " Don't redraw while executing macros (good performance config)
         set lazyredraw 
 
     " For regular expressions turn magic on
         set magic
-
-    " Show matching brackets when text indicator is over them
-    " How many tenths of a second to blink when matching brackets
-        set showmatch 
-        set mat=2
 
     " No annoying sound on errors
         set noerrorbells
@@ -73,17 +63,17 @@ call plug#end()
         set t_vb=
         set tm=500
 
-    " Add a bit extra margin to the left
-        set foldcolumn=1
-
         set encoding=utf8
 
     " Use Unix as the standard file type
         set ffs=unix,dos,mac
-" }
 
-" <COLORS> 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+    " Change leader key to ctrl+space
+        let mapleader = "\<Space>"
+" }}}
+
+" <COLORS> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Enable syntax highlighting
         syntax enable 
 
@@ -101,15 +91,13 @@ call plug#end()
             set t_Co=256
             set guitablabel=%M\ %t
         endif
-    " Fix no background in tmux
+
+    " Fix background in tmux
         set t_ut=
+" }}}
 
-        set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<",space:␣
-" }
-
-
-" <FILES, BACKUPS AND UNDO>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" <FILES, BACKUPS AND UNDO> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Turn backup off, since most stuff is in SVN, git et.c anyway...
         set nobackup
         set nowb
@@ -117,11 +105,10 @@ call plug#end()
 
     " Set to auto read when a file is changed from the outside
         set autoread
-" }
+" }}}
 
-
-" <TEXT, TAB AND INDENT RELATED>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" <TEXT, TAB AND INDENT RELATED> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Use spaces instead of tabs
         set expandtab
 
@@ -139,15 +126,21 @@ call plug#end()
         set ai "Auto indent
         set si "Smart indent
         set wrap "Wrap lines
+" }}}
 
+" <VISUAL MODE> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " highlight in visual stay
         vnoremap > >gv
         vnoremap < <gv
-" }
 
+    " This way v replaces viw, vaw, vi", va", vi(, va(, vi[, va[, vi{, va{, vip, vap, vit, vat, ... you get the idea.
+        vmap v <Plug>(expand_region_expand)
+        vmap <C-v> <Plug>(expand_region_shrink)
+" }}}
 
-" <MOVING AROUND, TABS, WINDOWS AND BUFFERS>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" <MOVING AROUND, TABS, WINDOWS AND BUFFERS> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Treat long lines as break lines (useful when moving around in them)
         map j gj
         map k gk
@@ -163,25 +156,51 @@ call plug#end()
         nnoremap <C-K> <C-W><C-K>
         nnoremap <C-L> <C-W><C-L>
         nnoremap <C-H> <C-W><C-H>
-" }
+" }}}
 
-
-" <FOLDING>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" <FOLDING> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " Enable folding
-        set foldmethod=manual
-        set foldlevel=99
+        " set foldmethod=manual
+        " set foldmethod=indent
+        " set foldmethod=expr   
+        set foldmethod=marker	
+        " set foldmethod=syntax	
+        " set foldmethod=diff   
+
+        " set foldmarker={{{,}}}
+        set foldlevel=9
 
     " Enable folding with the spacebar
-        nnoremap <space> za
+        nnoremap <Leader>f za
 
     " Want to see the docstrings for folded code?
         let g:SimpylFold_docstring_preview=1 " <plSIMPLYFOLD>
-" }
 
+    " Add a bit extra margin to the left
+        set foldcolumn=5
 
-" <HIGHLIGHT ALL INSTANCES OF WORD UNDER CURSOR, WHEN IDLE>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" }}}
+
+" <SEARCH> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Ignore case when searching
+        set ignorecase
+    " When searching try to be smart about cases 
+        set smartcase
+    " Highlight search results
+        set hlsearch
+    " Makes search act like search in modern browsers
+        set incsearch 
+
+    " Show matching brackets when text indicator is over them
+        set showmatch 
+    " How many tenths of a second to blink when matching brackets
+        set mat=4
+" }}}
+
+" <HIGHLIGHT ALL INSTANCES OF WORD UNDER CURSOR, WHEN IDLE> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " useful when studying strange source code.
 " type z/ to toggle highlighting on/off.
     nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
@@ -203,15 +222,26 @@ call plug#end()
         return 1
       endif
     endfunction
-" }
+" }}}
 
+" <HIGHLIGHT ALL INSTANCES OF WORD UNDER CURSOR, WHEN IDLE> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Type <Space>w to save file (a lot faster than :w<Enter>):
+        nnoremap <Leader>w :w<CR>
 
+    " Copy & paste to system clipboard with <Space>p and <Space>y:
+        vmap <Leader>y "+y
+        vmap <Leader>d "+d
+        nmap <Leader>p "+p
+        nmap <Leader>P "+P
+        vmap <Leader>p "+p
+        vmap <Leader>P "+P
+" }}}
 
-" <PLUGINS SETTINGS>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
-
-    " <plVIMUX RUN COMMAND IN TMUX PANE>
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+" <PLUGINS SETTINGS> {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " <plVIMUX RUN COMMAND IN TMUX PANE> {{{
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " map <f8> :call VimuxRunCommand("clear; python3 -i " . bufname("%"))<CR>
         map <f9> :call VimuxRunCommand("./" . bufname("%"))<CR>
 
@@ -219,36 +249,125 @@ call plug#end()
         map <Leader>rb :call VimuxRunCommand("rspec " . bufname("%"))<CR>
 
         " Prompt for a command to run
-        map <Leader>vp :VimuxPromptCommand<CR>
+        map <Leader>r :VimuxPromptCommand<CR>
 
         " Run last command executed by VimuxRunCommand
-        map <Leader>vl :VimuxRunLastCommand<CR>
+        map <Leader>rr :VimuxRunLastCommand<CR>
 
         " Inspect runner pane
-        map <Leader>vi :VimuxInspectRunner<CR>
+        map <Leader>ri :VimuxInspectRunner<CR>
 
         " Close vim tmux runner opened by VimuxRunCommand
-        map <Leader>vq :VimuxCloseRunner<CR>
+        map <Leader>rq :VimuxCloseRunner<CR>
 
         " Interrupt any command running in the runner pane
-        map <Leader>vx :VimuxInterruptRunner<CR>
+        map <Leader>rx :VimuxInterruptRunner<CR>
 
         " Zoom the runner pane (use <bind-key> z to restore runner pane)
-        map <Leader>vz :call VimuxZoomRunner()<CR>
-    " }
+        map <Leader>rz :call VimuxZoomRunner()<CR>
+    " }}}
 
+    " <plNERDTREE> {{{
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        " F2 to open/close sidebar with folders/files
+            map <F2> :NERDTreeTabsToggle<CR>
 
-    " <plNERDTREE>
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
-        let NERDTreeShowHidden=1
-    " }
+        " Show hidden files
+            let NERDTreeShowHidden=1
 
+        " Open NERDTree on gvim/macvim startup (1)
+            " let g:nerdtree_tabs_open_on_gui_startup = 1
 
-    " <plYOUCOMPLETEME AUTOCOMPLETE>
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" {
+        " Open NERDTree on console vim startup (0)
+            " let g:nerdtree_tabs_open_on_console_startup = 0
+
+        " Do not open NERDTree if vim starts in diff mode (1)
+            " let g:nerdtree_tabs_no_startup_for_diff = 1
+
+        " On startup - focus NERDTree when opening a directory, focus the file if editing a specified file. When set to `2`, always focus file after startup. (1)
+            " let g:nerdtree_tabs_smart_startup_focus = 1
+
+        " Open NERDTree on new tab creation (if NERDTree was globally opened by :NERDTreeTabsToggle) (1)
+            " let g:nerdtree_tabs_open_on_new_tab = 1
+
+        " Unfocus NERDTree when leaving a tab for descriptive tab names (1)
+            " let g:nerdtree_tabs_meaningful_tab_names = 1
+
+        " Close current tab if there is only one window in it and it's NERDTree (1)
+            " let g:nerdtree_tabs_autoclose = 1
+
+        " Synchronize view of all NERDTree windows (scroll and cursor position) (1)
+            " let g:nerdtree_tabs_synchronize_view = 1
+
+        " Synchronize focus when switching tabs (focus NERDTree after tab switch if and only if it was focused before tab switch) (1)
+            " let g:nerdtree_tabs_synchronize_focus = 1
+
+        " When switching into a tab, make sure that focus is on the file window, not in the NERDTree window. (Note that this can get annoying if you use NERDTree's feature "open in new tab silently", as you will lose focus on the NERDTree.) (0)
+            " let g:nerdtree_tabs_focus_on_files = 0
+    " }}}
+
+    " <plYOUCOMPLETEME AUTOCOMPLETE> {{{
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     " The former line ensures that the autocomplete window goes away when you’re done with it, and the latter defines a shortcut for goto definition.
         " let g:ycm_autoclose_preview_window_after_completion=1
         " map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-    " }
+    " }}}
 
-" }
+    " <plGITGUTTER> {{{
+        " KEY MAPPINGS {{{
+            " To change the hunk-jumping maps (defaults shown):
+                " nmap [c <Plug>GitGutterPrevHunk
+                " nmap ]c <Plug>GitGutterNextHunk
+
+            " To change the hunk-staging/undoing/previewing maps (defaults shown):
+                " nmap <Leader>hs <Plug>GitGutterStageHunk
+                " nmap <Leader>hu <Plug>GitGutterUndoHunk
+                " nmap <Leader>hp <Plug>GitGutterPreviewHunk
+
+            " To change the hunk text object maps (defaults shown):
+                " omap ic <Plug>GitGutterTextObjectInnerPending
+                " omap ac <Plug>GitGutterTextObjectOuterPending
+            " To change the hunk text object maps (defaults shown):
+                " xmap ic <Plug>GitGutterTextObjectInnerVisual
+                " xmap ac <Plug>GitGutterTextObjectOuterVisual
+
+            " To disable all key maps:
+                " let g:gitgutter_map_keys = 0
+        " }}}
+
+        " SETTINGS {{{
+            " TO USE A CUSTOM GREP COMMAND
+            " To use a custom invocation for grep, use this:
+              " let g:gitgutter_grep_command = 'grep --color=never -e'
+
+            " TO TURN OFF VIM-GITGUTTER BY DEFAULT
+              " let g:gitgutter_enabled = 0
+
+            " TO TURN OFF SIGNS BY DEFAULT
+            " Note that the sign column will still be present if you have line highlighting switched on.
+              " let g:gitgutter_signs = 0
+
+            " TO TURN ON LINE HIGHLIGHTING BY DEFAULT
+              " let g:gitgutter_highlight_lines = 1
+
+            " TO STOP VIM-GITGUTTER RUNNING IN REALTIME
+              " let g:gitgutter_realtime = 0
+
+            " TO STOP VIM-GITGUTTER RUNNING EAGERLY
+              " let g:gitgutter_eager = 0
+
+            " TO TURN OFF ASYNCHRONOUS UPDATES
+            " By default diffs are run asynchronously.  To run diffs synchronously
+            " instead:
+                " let g:gitgutter_async = 0
+        " }}}
+
+    " }}}
+
+    " <plEXPANDREGION> {{{
+        vmap v <Plug>(expand_region_expand)
+        vmap <C-v> <Plug>(expand_region_shrink)
+    " }}}
+
+" }}}
+
