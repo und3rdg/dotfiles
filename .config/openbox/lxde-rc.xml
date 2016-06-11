@@ -195,10 +195,10 @@
         <width>50%</width>
       </action>
     </keybind>
-    <keybind key="W-Return">
+    <keybind key="A-W-Up">
         <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="W-A-Return">
+    <keybind key="C-W-Up">
         <action name="ToggleMaximizeVert"/>
     </keybind>
     <!-- Keybindings for desktop switching -->
