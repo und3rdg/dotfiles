@@ -1,6 +1,6 @@
 # For the benefit of emacs users: -*- shell-script -*-
 ###########################
-# xbindkeys configuration #
+# xbindkeys configuration # {{{
 ###########################
 #
 # Version: 1.8.6
@@ -37,23 +37,23 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# Examples of commands:
+# }}}
 
-# VOLUME BUTTONS (DELL) {
-"ponymix -c 0 increase 10"
+# VOLUME BUTTONS (DELL) {{{
+"ponymix -c 0 increase 10; ponymix -c 1 increase 10"
     m:0x0 + c:123
     XF86AudioRaiseVolume
 
-"ponymix -c 0 decrease 10"
+"ponymix  -c 0 decrease 10; ponymix -c 1 decrease 10"
     m:0x0 + c:122
     XF86AudioLowerVolume
 
-"ponymix -c 0 toggle"
+"ponymix -c 0 toggle; ponymix -c 1 toggle"
     m:0x0 + c:121
     XF86AudioMute
-# }
+# }}}
 
-# MPD controll {
+# MPD controll {{{
 "mpc toggle"
     m:0x0 + c:172
     XF86AudioPlay
@@ -63,14 +63,17 @@
 "mpc prev"
     m:0x0 + c:173
     XF86AudioPrev
-# }
+# }}}
 
+# Brightness {{{
 "xbacklight +30"
     m:0x0 + c:233
     XF86MonBrightnessUp
 "xbacklight -30"
     m:0x0 + c:232
     XF86MonBrightnessDown
+
+# }}}
 ##################################
 # End of xbindkeys configuration #
 ##################################
