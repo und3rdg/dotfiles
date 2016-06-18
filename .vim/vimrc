@@ -25,6 +25,7 @@
 
     Plug 'terryma/vim-expand-region' " <plEXPANDREGION>
 
+    Plug 'mattn/emmet-vim'
     " Theme
     Plug 'morhetz/gruvbox'
     " Plug 'altercation/vim-colors-solarized'
