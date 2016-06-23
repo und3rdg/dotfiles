@@ -11,7 +11,9 @@
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' } " <plNERDTREE>
     Plug 'jistr/vim-nerdtree-tabs'
 
-    " Plug 'Valloric/YouCompleteMe' " <plYOUCOMPLETEME>
+    Plug 'Valloric/YouCompleteMe' " <plYOUCOMPLETEME>
+    Plug 'marijnh/tern_for_vim'
+
     Plug 'chrisbra/Colorizer', { 'on': 'ColorToogle' }
     " Plug 'davidhalter/jedi-vim' " python
 
@@ -25,7 +27,18 @@
 
     Plug 'terryma/vim-expand-region' " <plEXPANDREGION>
 
+    " html plugins
     Plug 'mattn/emmet-vim'
+
+    " javascript plugins
+    " syntax
+    Plug 'jelera/vim-javascript-syntax'
+    Plug 'jpangloss/vim-javascript'
+    " indent
+    Plug 'jnathanaelkane/vim-indent-guides'
+    " auto ad clousing
+    Plug 'Raimondi/delimitMate'
+
     " Theme
     Plug 'morhetz/gruvbox'
     " Plug 'altercation/vim-colors-solarized'
