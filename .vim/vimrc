@@ -11,10 +11,11 @@
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' } " <plNERDTREE>
     Plug 'jistr/vim-nerdtree-tabs'
 
-    Plug 'Valloric/YouCompleteMe' " <plYOUCOMPLETEME>
+    " Plug 'Valloric/YouCompleteMe' " <plYOUCOMPLETEME>
     Plug 'marijnh/tern_for_vim'
 
     Plug 'chrisbra/Colorizer', { 'on': 'ColorToogle' }
+    Plug 'blindFS/vim-colorpicker'
     " Plug 'davidhalter/jedi-vim' " python
 
     Plug 'tpope/vim-commentary'
