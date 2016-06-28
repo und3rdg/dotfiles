@@ -85,7 +85,12 @@ call plug#end()
         set ffs=unix,dos,mac
 
     " Change leader key to ctrl+space
-        let mapleader = "\<Space>"
+
+    " autoreload vimrc
+        augroup reload_vimrc " {
+            autocmd!
+            autocmd BufWritePost $MYVIMRC source $MYVIMRC
+        augroup END " }
 " }}}
 
 " <COLORS> {{{
@@ -391,4 +396,3 @@ call plug#end()
         let g:tmux_navigator_save_on_switch = 1
     " }}}
 " }}}
-
