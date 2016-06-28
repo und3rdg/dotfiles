@@ -28,16 +28,15 @@
 
     Plug 'terryma/vim-expand-region' " <plEXPANDREGION>
 
+    Plug 'djoshea/vim-autoread'
+
     " html plugins
     Plug 'mattn/emmet-vim'
 
-    " javascript plugins
-    " syntax
+    " JAVASCRIPT PLUGINS
+    " SYNTAX
     Plug 'jelera/vim-javascript-syntax'
-    Plug 'jpangloss/vim-javascript'
-    " indent
-    Plug 'jnathanaelkane/vim-indent-guides'
-    " auto ad clousing
+    " AUTO ADD CLOUSING
     Plug 'Raimondi/delimitMate'
 
     " Theme
