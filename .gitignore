@@ -1,8 +1,10 @@
 #*/plugged/*
-*cache*
-*/tmp*
+cache*
+tmp/
 .config/pavucontrol.ini
-.config/ranger/history
-.config/pulse/*
-.config/mps-youtube/input_history
-.config/chromium/*
+.config/pulse/
+.config/mps-youtube/
+.config/chromium/
+.config/libreoffice/
+.config/pcmanfm/
+.config/ranger/
