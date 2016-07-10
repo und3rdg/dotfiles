@@ -8,3 +8,6 @@ tmp/
 .config/libreoffice/
 .config/pcmanfm/
 .config/ranger/
+.config/configstore/
+.config/gconf/apps/guake/
+.config/mps-youtube/
