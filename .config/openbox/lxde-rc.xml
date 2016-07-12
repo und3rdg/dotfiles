@@ -176,7 +176,7 @@
   <keyboard> <!-- {{{ -->
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Fill left half of desktop -->
-    <keybind key="A-W-Left">
+    <keybind key="W-Left">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>0</x>
@@ -186,7 +186,7 @@
       </action>
     </keybind>
     <!-- Fill right half of desktop -->
-    <keybind key="A-W-Right">
+    <keybind key="W-Right">
       <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>-0</x>
@@ -195,10 +195,10 @@
         <width>50%</width>
       </action>
     </keybind>
-    <keybind key="A-W-Up">
+    <keybind key="W-Up">
         <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="C-W-Up">
+    <keybind key="A-W-Up">
         <action name="ToggleMaximizeVert"/>
     </keybind>
     <!-- Keybindings for desktop switching -->
