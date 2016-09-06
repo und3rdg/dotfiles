@@ -10,6 +10,7 @@
 
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' } " <plNERDTREE>
     Plug 'jistr/vim-nerdtree-tabs'
+    Plug 'kien/ctrlp.vim'
 
     Plug 'Valloric/YouCompleteMe' " <plYOUCOMPLETEME>
     Plug 'marijnh/tern_for_vim'
@@ -52,6 +53,9 @@ call plug#end()
         filetype plugin on
         filetype indent on
 
+    " Auto save on focus lost
+        au FocusLost * :wa
+
     " Stop that stupid window from popping up:
         map q: :q
 
@@ -83,7 +87,8 @@ call plug#end()
     " Use Unix as the standard file type
         set ffs=unix,dos,mac
 
-    " Change leader key to ctrl+space
+    " Change leader key
+        let mapleader=","
 
     " autoreload vimrc
         augroup reload_vimrc " {
