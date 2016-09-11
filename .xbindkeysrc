@@ -40,15 +40,15 @@
 # }}}
 
 # VOLUME BUTTONS (DELL) {{{
-"ponymix -c 0 increase 10; ponymix -c 1 increase 10"
+"ponymix -d 3 increase 8; ponymix -c 1 increase 8"
     m:0x0 + c:123
     XF86AudioRaiseVolume
 
-"ponymix  -c 0 decrease 10; ponymix -c 1 decrease 10"
+"ponymix  -d 3 decrease 8; ponymix -c 1 decrease 8"
     m:0x0 + c:122
     XF86AudioLowerVolume
 
-"ponymix -c 0 toggle; ponymix -c 1 toggle"
+"ponymix -d 3 toggle; ponymix -c 1 toggle"
     m:0x0 + c:121
     XF86AudioMute
 # }}}
