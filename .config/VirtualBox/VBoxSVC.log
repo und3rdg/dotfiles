@@ -1,0 +1,56 @@
+VirtualBox XPCOM Server 5.1.2_OSE r108956 linux.amd64 (Jul 28 2016 01:04:25) release log
+00:00:00.000392 main     Log opened 2016-08-13T14:07:26.130600000Z
+00:00:00.000395 main     Build Type: release
+00:00:00.000399 main     OS Product: Linux
+00:00:00.000401 main     OS Release: 4.6.1-1-zen
+00:00:00.000402 main     OS Version: #1 ZEN SMP PREEMPT Thu Jun 2 13:29:40 UTC 2016
+00:00:00.000431 main     DMI Product Name: Latitude E6330
+00:00:00.000441 main     DMI Product Version: 01
+00:00:00.000492 main     Host RAM: 3862MB total, 3387MB available
+00:00:00.000497 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000498 main     Process ID: 21710
+00:00:00.000499 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.002614 main     IPC socket path: /tmp/.vbox-undg-ipc/ipcd
+00:00:00.109257 nspr-2   VirtualBox: object creation starts
+00:00:00.109447 nspr-2   Home directory: '/home/undg/.config/VirtualBox'
+00:00:00.110179 nspr-2   Loading settings file "/home/undg/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.160491 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.161477 nspr-2   NAT: resolv.conf: nameserver 8.8.8.8
+00:00:00.161509 nspr-2   NAT: resolv.conf: nameserver 8.8.4.4
+00:00:00.161532 nspr-2   HostDnsMonitor: old information
+00:00:00.161539 nspr-2     no server entries
+00:00:00.161544 nspr-2     no domain set
+00:00:00.161549 nspr-2     no search string entries
+00:00:00.161554 nspr-2   HostDnsMonitor: new information
+00:00:00.161558 nspr-2     server 1: 8.8.8.8
+00:00:00.161564 nspr-2     server 2: 8.8.4.4
+00:00:00.161569 nspr-2     no domain set
+00:00:00.161573 nspr-2     no search string entries
+00:00:00.161582 nspr-2   HostDnsMonitorProxy::notify
+00:00:00.172269 nspr-2   failed to create vboxnet0, error (0x80004005)
+00:00:00.172800 nspr-2   VD: VDInit finished
+00:00:00.172936 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={0eb668d2-495e-5a36-8890-29999b5f030c} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.179144 nspr-2   Loading settings file "/home/undg/.Genymobile/Genymotion/deployed/Google Nexus 5X - 6.0.0 - API 23 - 1080x1920/Google Nexus 5X - 6.0.0 - API 23 - 1080x1920.vbox" with version "1.12-linux"
+00:00:00.180476 nspr-2   VirtualBox: object created
+00:00:00.265255 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.345593 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.359143 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.371072 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.870557 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.933610 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:01.002970 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:01.164280 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlp2s0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:01.665954 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 1 of controller 'IDEController'}, preserve=false aResultDetail=0
+00:00:01.666116 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 1 of controller 'IDEController'}, preserve=false aResultDetail=0
+00:00:01.666236 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 1 on port 1 of controller 'IDEController'}, preserve=false aResultDetail=0
+00:00:01.666344 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 1 on port 1 of controller 'IDEController'}, preserve=false aResultDetail=0
+00:00:01.671923 nspr-3   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={afca788c-4477-787d-60b2-3fa70e56fbbc} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true  aResultDetail=0
+00:00:01.674106 nspr-3   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={afca788c-4477-787d-60b2-3fa70e56fbbc} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=true  aResultDetail=0
+00:00:06.677671 main     VirtualBox: object deletion starts
+00:00:06.677783 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/home/undg/.Genymobile/Genymotion/deployed/Google Nexus 5X - 6.0.0 - API 23 - 1080x1920/Snapshots/{0256cf24-b150-4759-a074-fc1bf6def759}.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:06.678709 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/home/undg/.Genymobile/Genymotion/deployed/Google Nexus 5X - 6.0.0 - API 23 - 1080x1920/android_system_disk.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:06.678793 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/home/undg/.Genymobile/Genymotion/deployed/Google Nexus 5X - 6.0.0 - API 23 - 1080x1920/Snapshots/{7aeed605-59b6-4f97-961c-acca37900032}.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:06.678840 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={4afe423b-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium '/home/undg/.Genymobile/Genymotion/deployed/Google Nexus 5X - 6.0.0 - API 23 - 1080x1920/android_data_disk.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:00:07.177815 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={0169423f-46b4-cde9-91af-1e9d5b6cd945} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:11.679778 main     {00007f9eec015af0} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_TIMEOUT
+00:00:11.680239 main     VirtualBox: object deleted

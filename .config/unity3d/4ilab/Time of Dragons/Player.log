@@ -1,0 +1,109 @@
+
+Selecting FBConfig
+GLX_FBCONFIG_ID=123
+GLX_BUFFER_SIZE=32
+GLX_DOUBLEBUFFER=1
+GLX_RED_SIZE=8
+GLX_GREEN_SIZE=8
+GLX_BLUE_SIZE=8
+GLX_ALPHA_SIZE=8
+GLX_DEPTH_SIZE=24
+GLX_STENCIL_SIZE=8
+GLX_SAMPLES_ARB=0
+GLX_SAMPLE_BUFFERS_ARB=0
+GLX_STEREO=0
+GLX_CONFIG_CAVEAT=NONE
+
+Desktop is 1366 x 768 @ 60 Hz
+XError: GLXBadFBConfig (error 178, opcode 155/34, serial 59, XID 03600002, display 0x29f3800
+XError: GLXBadF[xcb] Unknown sequence number while processing queue
+[xcb] Most likely this is a multi-threaded client and XInitThreads has not been called
+[xcb] Aborting, sorry about that.
+tod.x86_64: ../../src/xcb_io.c:274: poll_for_event: Assertion `!xcb_xlib_threads_sequence_lost' failed.
+Preloaded type GtkListStore
+Preloaded type GtkWindow
+Preloaded type GtkVBox
+Preloaded type GtkImage
+Preloaded type GtkNotebook
+Preloaded type GtkHBox
+Preloaded type GtkFrame
+Preloaded type GtkAlignment
+Preloaded type GtkTreeView
+Preloaded type GtkLabel
+Preloaded type GtkCheckButton
+Preloaded type GtkScrolledWindow
+Preloaded type GtkComboBox
+Couldn't find OnScreenSelectorQuit in main module; checking child
+Couldn't find OnScreenSelectorOK in main module; checking child
+Couldn't find OnScreenSelectorQuit in main module; checking child
+Couldn't find OnInputListRowActivated in main module; checking child
+Stacktrace:
+
+
+Native stacktrace:
+
+	/home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Mono/x86_64/libmono.so(+0x91772) [0x7fb5b8255772]
+	/usr/lib/libpthread.so.0(+0x110a0) [0x7fb5bd1b90a0]
+	/usr/lib/libc.so.6(gsignal+0xcf) [0x7fb5bbf7608f]
+	/usr/lib/libc.so.6(abort+0x16a) [0x7fb5bbf774ba]
+	/usr/lib/libc.so.6(+0x2bee7) [0x7fb5bbf6eee7]
+	/usr/lib/libc.so.6(+0x2bf92) [0x7fb5bbf6ef92]
+	/home/undg/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libX11.so.6(+0x3d543) [0x7fb5bca34543]
+	/home/undg/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libX11.so.6(+0x3d561) [0x7fb5bca34561]
+	/home/undg/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libX11.so.6(_XEventsQueued+0x5d) [0x7fb5bca34cbd]
+	/home/undg/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libX11.so.6(_XGetRequest+0xa5) [0x7fb5bca379c5]
+	/home/undg/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libX11.so.6(+0x40a4f) [0x7fb5bca37a4f]
+	/home/undg/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libX11.so.6(_XError+0x145) [0x7fb5bca37225]
+	/usr/lib/libGL.so.1(+0x1d3a2) [0x7fb5bcd493a2]
+	/usr/lib/libGL.so.1(+0x194a4) [0x7fb5bcd454a4]
+	/home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod.x86_64() [0xe9ffcf]
+	/home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod.x86_64() [0xea0cb2]
+	/home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod.x86_64() [0x4651c4]
+	/usr/lib/libc.so.6(__libc_start_main+0xf1) [0x7fb5bbf632d1]
+	/home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod.x86_64() [0x46e6c9]
+
+Debug info from gdb:
+
+
+=================================================================
+Got a SIGABRT while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+alidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_occlusion_query2 GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counters GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_s
+torage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_420pack GL_ARB_shading_language_packing GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_barrier GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_binding GL_ARB_vertex_shader GL
+_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_IBM_multimode_draw_arrays GL_INTEL_performance_query GL_KHR_context_flush_control GL_KHR_debug GL_KHR_robustness GL_MESA
+_pack_invert GL_MESA_texture_signed_rgba GL_NV_conditional_render GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_OES_read_format GL_S3_s3tc
+OPENGL LOG: Creating OpenGL 3.3 graphics device
+AudioManager: Using PulseAudio: Default Output Device
+Begin MonoManager ReloadAssembly
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-CSharp.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-UnityScript.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.UI.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.Networking.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.Analytics.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/devtodev.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/devtodev.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/devtodev_cross.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/devtodev_cross.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/ArabicSupport.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/ArabicSupport.dll into Unity Child Domain
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Photon3Unity3D.dll (this message is harmless)
+Loading /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.056 seconds
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/System.Core.dll (this message is harmless)
+Platform assembly: /home/undg/.local/share/Steam/steamapps/common/TimeOfDragons/tod_Data/Managed/System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'GrassOnMeshGenerator/BillboardWavingDoublePass' - Pass '' has no vertex shader
+XError: BadMatch (invalid parameter attributes) (error 8, opcode 155/34, serial 86, XID 0360000e, display 0x29f3800

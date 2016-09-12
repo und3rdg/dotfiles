@@ -1,0 +1,44 @@
+<unity_prefs version_major="1" version_minor="1">
+	<pref name="Anisotropic" type="string">RmFsc2U=</pref>
+	<pref name="AntiAliasing" type="string">VHJ1ZQ==</pref>
+	<pref name="Blood" type="string">VHJ1ZQ==</pref>
+	<pref name="CarEffect" type="string">RmFsc2U=</pref>
+	<pref name="ColorCorrection" type="string">VHJ1ZQ==</pref>
+	<pref name="Contrast" type="string">RmFsc2U=</pref>
+	<pref name="DOF" type="string">RmFsc2U=</pref>
+	<pref name="Fog" type="string">RmFsc2U=</pref>
+	<pref name="FullScreen" type="string">VHJ1ZQ==</pref>
+	<pref name="GarageCamDistans" type="float">9</pref>
+	<pref name="Grass" type="string">RmFsc2U=</pref>
+	<pref name="HDR" type="string">RmFsc2U=</pref>
+	<pref name="MouseSensitivity" type="float">0.2</pref>
+	<pref name="NewsLastDayOfYearShowed" type="int">230</pref>
+	<pref name="QualityAutoInstalled_20150611" type="int">1</pref>
+	<pref name="QualityLevel" type="int">0</pref>
+	<pref name="QualityLod" type="int">0</pref>
+	<pref name="QualityShadow" type="int">0</pref>
+	<pref name="RememberMe" type="string">VHJ1ZQ==</pref>
+	<pref name="ResolutionHeight" type="int">768</pref>
+	<pref name="ResolutionWidth" type="int">1366</pref>
+	<pref name="SSAO" type="string">RmFsc2U=</pref>
+	<pref name="Screenmanager Is Fullscreen mode" type="int">1</pref>
+	<pref name="Screenmanager Resolution Height" type="int">768</pref>
+	<pref name="Screenmanager Resolution Width" type="int">1366</pref>
+	<pref name="ShowGreeting" type="int">0</pref>
+	<pref name="ShowShadowCars" type="int">0</pref>
+	<pref name="Sound" type="float">0.5</pref>
+	<pref name="SunShafts" type="string">RmFsc2U=</pref>
+	<pref name="TexturesLevel" type="int">0</pref>
+	<pref name="Tutorialfirst" type="int">1</pref>
+	<pref name="UnityGraphicsQuality" type="int">0</pref>
+	<pref name="WaterLevel" type="int">0</pref>
+	<pref name="Wind" type="string">VHJ1ZQ==</pref>
+	<pref name="comixEffect" type="int">1</pref>
+	<pref name="effectsVolume" type="float">0.5</pref>
+	<pref name="lang_id" type="int">2</pref>
+	<pref name="last_server_id" type="int">1</pref>
+	<pref name="musicVolume" type="float">0.5</pref>
+	<pref name="server" type="string">MTAuMTUuMTAuNTU6NTA1NQ==</pref>
+	<pref name="server_list" type="string">WyB7ImlkIjoiMSIsICJuYW1lIjoiRXVyb3BlIiwgImhvc3QiOiJzYjAxLnN0ZWFtYmF0dGxlLnJ1IiwgInBvcnQiOiI1MDU1IiwgImF2YWlsYWJsZSI6IjEifSwgeyJpZCI6IjIiLCAibmFtZSI6Ik5vcnRoIEFtZXJpY2EiLCAiaG9zdCI6InNiMTMuc3RlYW1iYXR0bGUucnUiLCAicG9ydCI6IjUwNTUiLCAiYXZhaWxhYmxlIjoiMCJ9IF0=</pref>
+	<pref name="vSync" type="string">RmFsc2U=</pref>
+</unity_prefs>

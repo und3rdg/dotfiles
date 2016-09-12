@@ -1,0 +1,26 @@
+<unity_prefs version_major="1" version_minor="1">
+	<pref name="AFXVolume" type="float">1</pref>
+	<pref name="AccessedBattleButton" type="int">1</pref>
+	<pref name="AccessedMenuTAB" type="int">1</pref>
+	<pref name="AdvanceEditInfo" type="int">1</pref>
+	<pref name="AdvancedEditCenterOfMass" type="int">1</pref>
+	<pref name="CappedFrameRate" type="int">120</pref>
+	<pref name="CappedFrameRateEnabled" type="int">1</pref>
+	<pref name="GA_FirstPlayMenuButtonClick" type="string">QnV0dG9uX1R1dG9yaWFs</pref>
+	<pref name="GA_FunnelEventSent" type="int">1</pref>
+	<pref name="Language" type="string">RW5nbGlzaA==</pref>
+	<pref name="MouseInvertY" type="int">0</pref>
+	<pref name="MouseSpeedBuild" type="float">0.5</pref>
+	<pref name="MouseSpeedFight" type="float">0.5</pref>
+	<pref name="MusicVolume" type="float">0.125893</pref>
+	<pref name="Screenmanager Is Fullscreen mode" type="int">1</pref>
+	<pref name="Screenmanager Resolution Height" type="int">768</pref>
+	<pref name="Screenmanager Resolution Width" type="int">1366</pref>
+	<pref name="ToggleZoom" type="int">1</pref>
+	<pref name="UnityGraphicsQuality" type="int">0</pref>
+	<pref name="UnitySelectMonitor" type="int">-1</pref>
+	<pref name="VoiceOverVolume" type="float">1</pref>
+	<pref name="afkWarningShown" type="int">0</pref>
+	<pref name="rememberme" type="int">0</pref>
+	<pref name="session_num" type="int">15</pref>
+</unity_prefs>
