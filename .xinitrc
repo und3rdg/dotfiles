@@ -51,3 +51,6 @@ fi
 # exec xterm -geometry 80x66+0+0 -name login
 # exec ssh-agent startlxqt
 exec ssh-agent startlxde
+
+xmodmap -e 'clear lock'
+xmodmap -e 'keycode 0x42=Escape'
